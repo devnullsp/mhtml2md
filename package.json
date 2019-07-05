@@ -2,7 +2,7 @@
 	"name": "mhtml2md",
 	"displayName": "mhtml2md",
 	"description": "convert mhtml a md",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
@@ -14,15 +14,19 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [{
+		"commands": [
+			{
 				"command": "mhtml2md",
 				"title": "Convertir mhtml a md"
-		}],
+			}
+		],
 		"menus": {
-			"explorer/context": [{
-				"when": "resourceFilename =~ /.*mht$/",
-				"command": "mhtml2md"
-			}]
+			"explorer/context": [
+				{
+					"when": "resourceFilename =~ /.*mht$/",
+					"command": "mhtml2md"
+				}
+			]
 		}
 	},
 	"scripts": {
