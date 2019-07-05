@@ -1,12 +1,12 @@
-# mhtml2md README
-
-This is the README for your extension "mhtml2md". 
+# mhtml2md
 
 Convert files mht (mhtml) to md (markdown).
 
 ## Features
 
 Convert files created with psr.exe on windows into markdown files.
+
+Use from command or edit file context menu.
 
 Free for use.
 

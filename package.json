@@ -4,6 +4,10 @@
 	"displayName": "mhtml2md",
 	"description": "convert mhtml a md",
 	"version": "1.0.2",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/devnullsp/mhtml2md.git"
+	},
 	"engines": {
 		"vscode": "^1.35.0"
 	},
