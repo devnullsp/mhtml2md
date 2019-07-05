@@ -1,9 +1,9 @@
 {
 	"name": "mhtml2md",
-  	"publisher": "devnullsp",
+	"publisher": "devnullsp",
 	"displayName": "mhtml2md",
 	"description": "convert mhtml a md",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
