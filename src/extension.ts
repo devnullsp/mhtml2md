@@ -46,8 +46,9 @@ export function deactivate() {}
 //-------------------------------------------------------------------------------------------------------------------------
 function procesarFichero(_path: string){
 	//separo el path del nombre y genero los datos necesarios
-	let pparse 		=  path.parse(_path);
+	let pparse 		= path.parse(_path);
 	let directorio 	= pparse.dir+path.sep+pparse.name+"_img";
+	let nomdir      = pparse.name+"_img/";
 	let fSalida     = pparse.dir+path.sep+pparse.name+".md";
 	console.log('mhtml2md: procesar ' + _path+" en "+directorio);
 	console.log('mhtml2md: fichero salida '+fSalida);
@@ -107,7 +108,7 @@ function procesarFichero(_path: string){
 			ws.write("- X/Y Pantalla "+n[i].getElementsByTagName("ScreenCoordsXYWH")[0].childNodes[0].data+"\n\n");
 		}
 		ssfn = n[i].getElementsByTagName("ScreenshotFileName")[0].childNodes[0].data;		
-		ws.write("!["+ssfn+"]("+directorio+path.sep+ssfn+")\n\n");
+		ws.write("!["+ssfn+"]("+nomdir+ssfn+")\n\n");
 	}
 
 

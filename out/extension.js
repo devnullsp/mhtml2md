@@ -48,6 +48,7 @@ function procesarFichero(_path) {
     //separo el path del nombre y genero los datos necesarios
     let pparse = path.parse(_path);
     let directorio = pparse.dir + path.sep + pparse.name + "_img";
+    let nomdir = pparse.name + "_img/";
     let fSalida = pparse.dir + path.sep + pparse.name + ".md";
     console.log('mhtml2md: procesar ' + _path + " en " + directorio);
     console.log('mhtml2md: fichero salida ' + fSalida);
@@ -107,10 +108,9 @@ function procesarFichero(_path) {
             ws.write("- X/Y Pantalla " + n[i].getElementsByTagName("ScreenCoordsXYWH")[0].childNodes[0].data + "\n\n");
         }
         ssfn = n[i].getElementsByTagName("ScreenshotFileName")[0].childNodes[0].data;
-        ws.write("![" + ssfn + "](" + directorio + path.sep + ssfn + ")\n\n");
+        ws.write("![" + ssfn + "](" + nomdir + ssfn + ")\n\n");
     }
     for (let i = 0; i < n.length; i++) {
-        console.log("Fichero " + i);
         ssfn = n[i].getElementsByTagName("ScreenshotFileName")[0].childNodes[0].data;
         //Leer hasta la linea que ponga el screen y al valor y luego leo la linea en blanco
         while (line = liner.next()) {
@@ -130,11 +130,5 @@ function procesarFichero(_path) {
         }
         fs.writeFileSync(directorio + path.sep + ssfn, b, 'base64');
     }
-    /*
-        <Description>Clic del usuario con botón primario en "CaixaBank | Particulares, Empresas | CaixaBank - Google Chrome (panel)", en "Cai"</Description>
-        <Action>Clic con botón primario del mouse</Action>
-        <CursorCoordsXY>56,243</CursorCoordsXY>
-        <ScreenCoordsXYWH>0,0,2560,1080</ScreenCoordsXYWH>
-    ^*/
 }
 //# sourceMappingURL=extension.js.map
