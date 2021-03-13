@@ -51,7 +51,7 @@
 	"dependencies": {
 		"n-readlines": "^1.0.0",
 		"xml2js": "^0.4.19",
-		"xmldom": "^0.1.27",
+		"xmldom": "^0.5.0",
 		"xpath": "0.0.27"
 	}
 }
